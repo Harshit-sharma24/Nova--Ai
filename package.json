@@ -1,0 +1,21 @@
+{
+  "name": "ai-voice-assistant",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "groq-sdk": "^0.30.0",
+    "mongoose": "^9.6.2",
+    "react-syntax-highlighter": "^16.1.1"
+  }
+}
