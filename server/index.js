@@ -8,6 +8,9 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
+console.log("MONGO_URI =", process.env.MONGO_URI);
+console.log("GROQ =", process.env.GROQ_API_KEY);
+
 const app = express();
 
 app.use(cors());
@@ -368,8 +371,8 @@ search conversation history before answering.
 
 });
 
-app.listen(5000, "0.0.0.0", () => {
+const PORT = process.env.PORT || 5000;
 
-  console.log("Server running on port 5000");
-
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
