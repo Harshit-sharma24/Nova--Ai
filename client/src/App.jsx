@@ -6,7 +6,7 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import novaAvatar from "./assets/nova55.png";
-import Particles from "react-tsparticles";
+import Particles from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
 
