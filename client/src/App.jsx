@@ -24,7 +24,7 @@ await loadFull(main);
   try {
 
     const res = await axios.get(
-      `http://localhost:5000/chat/${id}`
+      `https://nova-ai-1fpt.onrender.com/chat/${id}`
     );
 
     setCurrentChatId(id);
@@ -220,7 +220,7 @@ const [voiceEnabled, setVoiceEnabled] =
   useEffect(() => {
 
   
-fetch("http://localhost:5000/chats")
+fetch("https://nova-ai-1fpt.onrender.com/chats")
   .then((res) => res.json())
   .then((data) => {
 
@@ -299,7 +299,7 @@ const handleNewChat = () => {
     try {
 
     const response = await axios.post(
-  "http://localhost:5000/chat",
+  "https://nova-ai-1fpt.onrender.com/chat",
   {
     message: currentInput,
     chatId: currentChatId,
@@ -409,7 +409,7 @@ if (voiceEnabled) {
 }
 
 // Refresh Sidebar History
-fetch("http://localhost:5000/chats")
+fetch("https://nova-ai-1fpt.onrender.com/chats")
   .then((res) => res.json())
   .then((data) => {
     setHistory(data);
@@ -439,7 +439,7 @@ fetch("http://localhost:5000/chats")
   try {
 
     await axios.delete(
-      `http://localhost:5000/chat/${id}`
+     `https://nova-ai-1fpt.onrender.com/chat/${id}`
     );
 
     setHistory(
@@ -468,13 +468,13 @@ const newTitle = window.prompt(
   try {
 
     await axios.put(
-      `http://localhost:5000/chat/${id}`,
+     `https://nova-ai-1fpt.onrender.com/chat/${id}`,
       {
         title: newTitle,
       }
     );
 
-    fetch("http://localhost:5000/chats")
+  fetch("https://nova-ai-1fpt.onrender.com/chats")
       .then((res) => res.json())
       .then((data) => {
         setHistory(data);
@@ -493,10 +493,10 @@ const pinChat = async (id) => {
   try {
 
     await axios.put(
-      `http://localhost:5000/chat/pin/${id}`
+     `https://nova-ai-1fpt.onrender.com/chat/${id}`
     );
 
-    fetch("http://localhost:5000/chats")
+   fetch("https://nova-ai-1fpt.onrender.com/chats")
       .then((res) => res.json())
       .then((data) => {
         setHistory(data);
